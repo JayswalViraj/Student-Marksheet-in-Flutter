@@ -14,20 +14,17 @@ class SplashScreen extends StatefulWidget {
 }
 
 class _SplashScreenState extends State<SplashScreen> {
-
-
-@override
+  @override
   void initState() {
     // TODO: implement initState
     super.initState();
-     Timer(const Duration(seconds: 10), () {
-   Navigator.of(context).pushReplacement(
+    Timer(const Duration(seconds: 10), () {
+      Navigator.of(context).pushReplacement(
           MaterialPageRoute(builder: (context) => AddStudet()));
     });
   }
 
   @override
-   
   Widget build(BuildContext context) {
     return Scaffold(
       body: Center(
@@ -41,20 +38,21 @@ class _SplashScreenState extends State<SplashScreen> {
           SizedBox(
             height: 10,
           ),
-
-          Text("Simple Student Maksheet",style: TextStyle(color: primeryColor,fontWeight: FontWeight.w500,fontSize: 20),),
-        SizedBox(
+          Text(
+            "Simple Student Maksheet",
+            style: TextStyle(
+                color: primeryColor, fontWeight: FontWeight.w500, fontSize: 20),
+          ),
+          SizedBox(
             height: 10,
           ),
-        Text("Please Note: This is Simple App",style: TextStyle(color: Colors.red,fontWeight: FontWeight.w500,fontSize: 20),)
-       
-               ],
+          Text(
+            "Please Note: This is Simple App",
+            style: TextStyle(
+                color: Colors.red, fontWeight: FontWeight.w500, fontSize: 20),
+          )
+        ],
       )),
     );
-  
-  
-  
- 
- 
   }
 }
